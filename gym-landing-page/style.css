@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--color-surface);
+  font-family: var(--font-family);
+}
+:root {
+  /* Colors */
+  --color-primary: #e63946;
+  --color-background: #121212;
+  --color-surface: #1e1e1e;
+  --color-text: #ffffff;
+  --color-text-muted: #a3a3a3;
+  --color-border: #333333;
+
+  /* Typography */
+  --font-family: Arial, Helvetica, sans-serif;
+
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 3rem;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 4rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+}
+/*--  --*/
+/*-- Header --*/
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--color-surface);
+  height: 80px;
+  position: sticky;
+  top: 0;
+  color: var(--color-text);
+  padding: 16px 32px;
+}
+.nav-bar a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: var(--font-size-lg);
+  text-transform: uppercase;
+}
+.nav-bar li {
+  list-style-type: none;
+}
+.nav-items {
+  display: flex;
+  gap: 24px;
+}
+.cta {
+  background: var(--color-text-muted);
+  padding: 16px 32px;
+  border: var(--color-border) 2px solid;
+  border-radius: var(--radius-lg);
+}
+/*-- HERO --*/
+#hero {
+  background:
+    linear-gradient(to bottom, transparent 80%, var(--color-surface) 100%),
+    url(./assets/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 600px;
+}
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-surface);
+  font-size: var(--font-size-xxl);
+  text-shadow:
+    0 0 5px var(--color-text-muted),
+    0 0 10px var(--color-text-muted),
+    0 0 20px var(--color-text),
+    0 0 30px var(--color-text);
+}
+/*-- About --*/
+#about {
+  display: flex;
+  background: var(--color-surface);
+}
+.about-text {
+  flex: 1;
+  padding: 32px;
+  font-size: var(--font-size-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: var(--color-text);
+}
+.about-img {
+  flex: 1;
+  height: 600px;
+  object-fit: cover;
+}
+/*-- Trainers --*/
+#trainers {
+  padding: 32px;
+  background: var(--color-text-muted);
+  color: var(--color-text);
+  text-align: center;
+}
+.trainers-heading {
+  font-size: var(--font-size-xl);
+  margin-bottom: 16px;
+}
+.trainers-text {
+  font-size: var(--font-size-lg);
+}
+.trainers-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 36px;
+  justify-content: center;
+  margin: 36px;
+}
+.trainer-card {
+  width: 300px;
+  border: var(--color-border) 2px solid;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+.trainer-card img {
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.trainer-card-text {
+  padding: 8px 12px;
+  margin: 6px 12px;
+  height: 120px;
+}
+.trainer-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.trainer-specialization {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+}
+.trainer-description {
+  text-align: left;
+}
+/*-- Classes --*/
+#classes {
+  background: var(--color-background);
+  font-family: var(--font-family);
+  padding: 36px;
+  color: var(--color-text);
+}
+.classes-schedule {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  justify-content: center;
+  color: var(--color-text);
+  margin-bottom: 42px;
+}
+.schedule-day-card {
+  background: var(--color-surface);
+  display: grid;
+  grid-template-rows: 40px repeat(3, 1fr);
+}
+.day {
+  background: var(--color-border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+}
+.class-card {
+  border: var(--color-border) 3px solid;
+  padding: 8px;
+}
+.class-timing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.class-name {
+  padding-bottom: 8px;
+}
+.intensity {
+  color: var(--color-primary);
+  text-align: right;
+}
+.classes-heading {
+  font-size: var(--font-size-xl);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.classes-text {
+  font-size: var(--font-size-lg);
+  margin-bottom: 36px;
+  text-align: center;
+}
+
+/*--- Membership ---*/
+#membership{
+    padding: 36px;
+    background-color: var(--color-text-muted);
+    color: var(--color-text)
+}
+.membership-heading {
+  font-size: var(--font-size-xl);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.membership-text {
+  font-size: var(--font-size-lg);
+  margin-bottom: 36px;
+  text-align: center;
+}
+.membership-card{
+    height: 450px;
+    width: 100%;
+    border: var(--color-border) 3px solid;
+    text-align: center;
+    padding: 16px;
+}
+.membership-container{
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    justify-content: center;
+    gap: 36px;
+    margin-bottom: 36px;
+}
+.membership-li{
+    list-style-type: none;
+    margin-bottom: 16px;
+    font-size: var(--font-size-lg)
+}
+.membership-name{
+    font-size: var(--font-size-xl);
+    margin: 36px 0;
+    text-shadow:
+    1px 1px 1px var(--color-text-muted),
+    3px 3px 5px var(--color-text),
+    6px 6px 10px var(--color-text),
+    15px 15px 20px var(--color-text);
+}
+.membership-price{
+    font-size: var(--font-size-xxl);
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: 42px;
+}
+.membership-price span{
+    font-size: var(--font-size-sm);
+    color: var(--color-text)
+}
+/*-- Footer --*/
+#footer{
+    background: var(--color-surface);
+    color: var(--color-text);
+    padding: 36px;
+}
+.footer-info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+}
+.footer li{
+    list-style-type: none;
+}
+.footer-copyright{
+    margin-top: 36px;
+    text-align: center;
+    color: var(--color-text-muted)
+}
+.footer a{
+    color: var(--color-text);
+    text-decoration: none;
+}
+/*--- Responsivness ---*/
+@media (max-width: 1149px){
+    .membership-container{
+        grid-template-columns: repeat(3, 300px);
+    }
+    .membership-card{
+        width: 300px;
+    }
+}
+@media (max-width: 1023px){
+    .nav-bar a{
+        font-size: var(--font-size-sm);
+    }
+    .hero{
+        font-size: var(--font-size-xl);
+    }
+    .about-text{
+        font-size: var(--font-size-lg);
+    }
+    .trainers-cards{
+        grid-template-columns: repeat(2, 300px);
+    }
+    .classes-schedule{
+        grid-template-columns: repeat(3, 200px);
+    }
+    .membership-container{
+        grid-template-columns: repeat(2, 350px);
+        gap: 16px;
+    }
+}
+@media (max-width: 768px){
+    .nav-bar{
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .nav-items-mobile{
+        flex-basis: 100%;
+        order: 3;
+    }
+    .cta{
+        height: 36px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-items {
+        gap: 8px;
+        justify-content: center;
+    }
+    .hero-heading{
+        font-size: var(--font-size-lg);
+    }
+    #about{
+        flex-direction: column;
+    }
+    .about-img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+    .about-text{
+        font-size: var(--font-size-sm);
+    }
+    .trainers-heading, .classes-heading, .membership-heading{
+        font-size: var(--font-size-lg);
+    }
+    .trainers-text, .classes-text, .membership-text{
+        font-size: var(--font-size-sm);
+    }
+    .trainers-cards{
+        grid-template-columns: repeat(1, 300px);
+    }
+    .classes-schedule{
+        grid-template-columns: repeat(1, 200px);
+    }
+    .membership-container{
+        grid-template-columns: repeat(1, 350px);
+    }
+    .footer-info{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
